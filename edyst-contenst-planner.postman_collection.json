@@ -1,0 +1,230 @@
+{
+	"variables": [],
+	"info": {
+		"name": "edyst-contenst-planner",
+		"_postman_id": "fcb2a058-607b-2bf6-0282-bc2918a40556",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get running contests",
+			"request": {
+				"url": "http://localhost:3000/contest/codeforces",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "in this request we need to pass platformname as request param"
+			},
+			"response": [
+				{
+					"id": "2eae35cd-9bed-483d-8dcd-24345041a092",
+					"name": "get running contests",
+					"originalRequest": {
+						"url": "http://localhost:3000/contest/codeforces",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "1423",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 02 Jun 2022 07:00:56 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"58f-LGzLzpOD9QotVwjbmV5ZWfbx+rU\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1066,
+					"body": "{\"status\":true,\"msg\":\"\",\"response\":[{\"name\":\"Codeforces Round #796 (Div. 2)\",\"url\":\"https://codeforces.com/contestRegistration/1688\",\"start_time\":\"2022-06-03T14:35:00.000Z\",\"end_time\":\"2022-06-03T16:35:00.000Z\",\"duration\":\"7200\",\"in_24_hours\":\"No\",\"status\":\"BEFORE\"},{\"name\":\"Codeforces Round #796 (Div. 1)\",\"url\":\"https://codeforces.com/contestRegistration/1687\",\"start_time\":\"2022-06-03T14:35:00.000Z\",\"end_time\":\"2022-06-03T16:35:00.000Z\",\"duration\":\"7200\",\"in_24_hours\":\"No\",\"status\":\"BEFORE\"},{\"name\":\"Codeforces Round #797 (Div. 3)\",\"url\":\"https://codeforces.com/contestRegistration/1690\",\"start_time\":\"2022-06-07T14:35:00.000Z\",\"end_time\":\"2022-06-07T16:50:00.000Z\",\"duration\":\"8100\",\"in_24_hours\":\"No\",\"status\":\"BEFORE\"},{\"name\":\"Codeforces Round #798 (Div. 2)\",\"url\":\"https://codeforces.com/contestRegistration/1689\",\"start_time\":\"2022-06-10T16:35:00.000Z\",\"end_time\":\"2022-06-10T18:35:00.000Z\",\"duration\":\"7200\",\"in_24_hours\":\"No\",\"status\":\"BEFORE\"},{\"name\":\"Codeforces Round #799 (Div. 4)\",\"url\":\"https://codeforces.com/contestRegistration/1692\",\"start_time\":\"2022-06-14T14:35:00.000Z\",\"end_time\":\"2022-06-14T16:50:00.000Z\",\"duration\":\"8100\",\"in_24_hours\":\"No\",\"status\":\"BEFORE\"},{\"name\":\"Codeforces Round #TBA (Div. 2)\",\"url\":\"https://codeforces.com/contestRegistration/1695\",\"start_time\":\"2022-06-18T14:35:00.000Z\",\"end_time\":\"2022-06-18T16:35:00.000Z\",\"duration\":\"7200\",\"in_24_hours\":\"No\",\"status\":\"BEFORE\"}]}"
+				}
+			]
+		},
+		{
+			"name": "get-contests starts with in 24 hours",
+			"request": {
+				"url": "http://localhost:3000/contest/time/codeforces",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "in this we need to pass platform as the param to get the contests starts within 24 hours"
+			},
+			"response": [
+				{
+					"id": "e8e6e503-b368-4e53-899c-c414218ecc5a",
+					"name": "get-contests starts with in 24 hours",
+					"originalRequest": {
+						"url": "http://localhost:3000/contest/time/codeforces",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "79",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 02 Jun 2022 07:05:30 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"4f-V6zZsyKLRi4oDPyFVg7qykWE9gk\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1669,
+					"body": "{\"status\":true,\"msg\":\"currently there are no contests available\",\"response\":[]}"
+				}
+			]
+		},
+		{
+			"name": "get current running contests",
+			"request": {
+				"url": "http://localhost:3000/contest/running/codeforces",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "we need to pass platform as the param to get the current running contests in that platform"
+			},
+			"response": [
+				{
+					"id": "d2ff7bc6-9b9c-4aec-b508-f6fa603167a2",
+					"name": "get current running contests",
+					"originalRequest": {
+						"url": "http://localhost:3000/contest/running/codeforces",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "79",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 02 Jun 2022 07:15:36 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"4f-V6zZsyKLRi4oDPyFVg7qykWE9gk\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "keep-alive",
+							"key": "keep-alive",
+							"value": "timeout=5",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 6536,
+					"body": "{\"status\":true,\"msg\":\"currently there are no contests available\",\"response\":[]}"
+				}
+			]
+		}
+	]
+}

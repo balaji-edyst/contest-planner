@@ -84,6 +84,37 @@ app.get('/contest/running/:platform', async (req, res) => {
         });
     })
 });
+
+app.get('/get/contest/in-day',async function(req,res){
+    let response=[];
+    let platforms=['codeforces','codeforces_gym','top_coder','at_coder','code_chef','cs_academy','hacker_rank','hacker_earth','kick_start','leet_code'];
+    for (let platform of platforms) {
+        let contests=await getContestsOfFlatformInDay(platform);
+        if(contests.length){
+            response.push(contests);
+        }
+    }
+    res.json({
+        status:true,
+        msg:'',
+        response:response
+    })
+})
+
+ function getContestsOfFlatformInDay(platform){
+    return new Promise((resolve,reject)=>{
+        let url = "https://kontests.net/api/v1/" + platform;
+    axios.get(url).then((resp) => {
+        let response = [];
+        for (let obj of resp.data) {
+            if (obj['in_24_hours'] != 'No')
+                response.push(obj);
+        }
+        resolve(response);
+    })
+    })
+}
+
 app.listen(3000, () => {
     console.log("server started");
 })

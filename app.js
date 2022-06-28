@@ -85,11 +85,11 @@ app.get('/contest/running/:platform', async (req, res) => {
     })
 });
 
-app.get('/get/contest/in-day',async function(req,res){
+app.get('/get/contest/in-day/:date',async function(req,res){
     let response=[];
     let platforms=['codeforces','codeforces_gym','top_coder','at_coder','code_chef','cs_academy','hacker_rank','hacker_earth','kick_start','leet_code'];
     for (let platform of platforms) {
-        let contests=await getContestsOfFlatformInDay(platform);
+        let contests=await getContestsOfFlatformInDay(platform,req.params.date);
         if(contests.length){
             response.push(contests);
         }
@@ -101,13 +101,13 @@ app.get('/get/contest/in-day',async function(req,res){
     })
 })
 
- function getContestsOfFlatformInDay(platform){
+ function getContestsOfFlatformInDay(platform,date){
     return new Promise((resolve,reject)=>{
         let url = "https://kontests.net/api/v1/" + platform;
     axios.get(url).then((resp) => {
         let response = [];
         for (let obj of resp.data) {
-            if (obj['in_24_hours'] != 'No')
+            if (obj['start_time'].includes(date))
                 response.push(obj);
         }
         resolve(response);
